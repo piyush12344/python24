@@ -4,7 +4,6 @@ import sys
 import argparse
 assume_Role = boto3.client('sts',region_name='ap-south-1')
 #print('Default Provider Identity: : ' + assume_Role.get_caller_identity()['Arn'])
-assume_Role_Arn = 'arn:aws:iam::434662252123:role/shared-lifestyle-jenkins-assumable-role'
 assume_Role_Session_Name = 'stage'
 response=assume_Role.assume_role (
     RoleArn=assume_Role_Arn,
